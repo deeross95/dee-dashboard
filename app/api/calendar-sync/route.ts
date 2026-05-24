@@ -2,10 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID!;
 const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET!;
-const REDIRECT_URI = process.env.NEXT_PUBLIC_APP_URL
-  ? `${process.env.NEXT_PUBLIC_APP_URL}/api/calendar-sync/callback`
-  : "http://localhost:3000/api/calendar-sync/callback";
-
+const REDIRECT_URI = "https://dee-dashboard1.vercel.app/api/calendar-sync/callback";
 export async function GET(req: NextRequest) {
   const action = req.nextUrl.searchParams.get("action");
 
